@@ -1,0 +1,28 @@
+
+<h2>Détails d'un contact</h2>
+
+<p>
+    Prénom : <?=$this->escapeHtml($contact->getPrenom())?>
+</p>
+
+<p>
+    Nom : <?=$this->escapeHtml($contact->getNom())?>
+</p>
+
+<?php if ($contact->getEmail()) : ?>
+<p>
+    Email : <?=$this->escapeHtml($contact->getEmail())?>
+</p>
+<?php endif; ?>
+
+<?php if ($contact->getTelephone()) : ?>
+<p>
+    Téléphonne : <?=$this->escapeHtml($contact->getTelephone())?>
+</p>
+<?php endif; ?>
+
+<?php if ($contact->getSociete()) : ?>
+<p>
+    Société : <?=$this->escapeHtml($contact->getSociete()->getNom())?>
+</p>
+<?php endif; ?>

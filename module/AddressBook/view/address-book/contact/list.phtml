@@ -1,0 +1,36 @@
+<?php $this->headTitle('Liste des contacts'); ?>
+
+<?php $this->headStyle()->captureStart() ?>
+h1 {
+text-decoration: underline;
+}
+<?php $this->headStyle()->captureEnd() ?>
+
+<?php $this->inlineScript()->captureStart() ?>
+//alert('coucou');
+<?php $this->inlineScript()->captureEnd() ?>
+
+<h1>Liste des contacts</h1>
+
+<?php foreach ($this->flashMessenger()->getSuccessMessages() as $m) : ?>
+    <?=$this->bootstrapAlert($m)?>  
+<?php endforeach; ?>
+
+<table class="table table-striped">
+    <?php foreach ($contacts as $ctc) : ?>
+        <tr>
+            <td>
+                <?=$this->escapeHtml($ctc->getPrenom())?> <?=$this->escapeHtml($ctc->getNom())?>
+            </td>
+            <td>
+                <a href="<?=$this->url('contact/show', ['id'=>$this->escapeUrl($ctc->getId())])?>" class="btn btn-primary btn-xs">Détails</a>
+            </td>
+            <td>
+                <a href="<?=$this->url('contact/show/modify', ['id'=>$this->escapeUrl($ctc->getId())])?>" class="btn btn-warning btn-xs">Modifier</a>
+            </td>
+            <td>
+                <a href="<?=$this->url('contact/show/delete', ['id'=>$this->escapeUrl($ctc->getId())])?>" class="btn btn-danger btn-xs">Supprimer</a>
+            </td>
+        </tr>
+    <?php endforeach; ?>
+</table>
