@@ -1,12 +1,20 @@
 {
-    "name": "zendframework/skeleton-application",
-    "description": "Skeleton Application for ZF2",
+    "name": "adressebook",
+    "description": "Just to test zf2 and doctrine and some others stuffs...",
     "license": "BSD-3-Clause",
     "keywords": [
         "framework",
-        "zf2"
+        "zf2",
+        "doctrine"
     ],
-    "homepage": "http://framework.zend.com/",
+    "homepage": "https://github.com/Nirzol/AddressBook",
+    "authors": [
+        {
+            "name": "Eric Grondin",
+            "email": "later",
+            "homepage": "later"
+        }
+    ],
     "require": {
         "php": ">=5.3.3",
         "zendframework/zendframework": "~2.3",
