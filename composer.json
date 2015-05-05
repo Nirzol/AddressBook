@@ -10,9 +10,7 @@
     "homepage": "https://github.com/Nirzol/AddressBook",
     "authors": [
         {
-            "name": "Eric Grondin",
-            "email": "later",
-            "homepage": "later"
+            "name": "Eric Grondin"
         }
     ],
     "require": {
