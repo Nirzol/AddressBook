@@ -13,17 +13,15 @@ class ContactDoctrineORMServiceFactory implements FactoryInterface
     {
         /* @var $serviceLocator ObjectManager */
         $om   = $serviceLocator->get('Doctrine\ORM\EntityManager');
-        
+
         $contact = new \AddressBook\Entity\Contact();
-        
+
         $hydrator = new \DoctrineModule\Stdlib\Hydrator\DoctrineObject($om);
-        
+
         $contactInputFilter = new \AddressBook\InputFilter\ContactInputFilter();
-        
+
         $service = new ContactDoctrineService($om, $contact, $hydrator, $contactInputFilter);
 
         return $service;
     }
 }
-
-   

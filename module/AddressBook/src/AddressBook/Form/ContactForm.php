@@ -18,7 +18,7 @@ class ContactForm extends Form
 
 //        $element = new \Zend\Form\Element\Text('prenom');
 //        $element->setLabel('Prénom : ');
-//        $this->add($element);     
+//        $this->add($element);
         $this->add(array(
             'name' => 'prenom',
             'options' => array(
@@ -31,7 +31,7 @@ class ContactForm extends Form
 
 //        $element = new \Zend\Form\Element\Text('nom');
 //        $element->setLabel('Nom : ');
-//        $this->add($element);     
+//        $this->add($element);
         $this->add(array(
             'name' => 'nom',
             'options' => array(
@@ -44,7 +44,7 @@ class ContactForm extends Form
 
 //        $element = new \Zend\Form\Element\Text('email');
 //        $element->setLabel('Email : ');
-//        $this->add($element);     
+//        $this->add($element);
 //        $this->add(array(
 //            'name' => 'email',
 //            'options' => array(
@@ -87,7 +87,7 @@ class ContactForm extends Form
 //                ),
 //            );
 //        $elements->setOptions($options);
-//        
+//
 //        $this->add($elements);
 
         $this->add(array(
@@ -116,7 +116,7 @@ class ContactForm extends Form
 //                'find_method'        => array(
 //                    'name'   => 'getContinent',
 //                ),
-//            ), 
+//            ),
 //        ));
     }
 

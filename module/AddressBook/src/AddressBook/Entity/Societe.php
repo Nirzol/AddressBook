@@ -20,27 +20,28 @@ class Societe extends Addressbook
      * @ORM\GeneratedValue(strategy="AUTO")
      */
     protected $id;
-    
+
     /**
      * @var string
-     * 
-     * @ORM\Column(name="nom", type="string", length=40, nullable=false) 
+     *
+     * @ORM\Column(name="nom", type="string", length=40, nullable=false)
      */
     protected $nom;
-    
+
     /**
      * @var string
-     * 
-     * @ORM\Column(name="site_web", type="string", length=40, nullable=true) 
+     *
+     * @ORM\Column(name="site_web", type="string", length=40, nullable=true)
      */
     protected $siteWeb;
-    
+
     public function setId($id)
     {
         $this->id = $id;
+
         return $this;
     }
-    
+
     /**
      * Get id
      *

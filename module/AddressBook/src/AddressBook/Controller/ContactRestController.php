@@ -12,14 +12,14 @@ class ContactRestController extends AbstractRestfulController
 {
 
     /**
-     * 
+     *
      * @return ContactDoctrineService
      */
     protected $contactService;
 
     /**
      *
-     * @var ContactForm 
+     * @var ContactForm
      */
     protected $contactForm;
 
@@ -90,7 +90,6 @@ class ContactRestController extends AbstractRestfulController
             }
         }
 //        var_dump($contact);
-
         return new JsonModel(array(
 //            'data' => $contact->getId(),
             'success' => false,
@@ -103,13 +102,13 @@ class ContactRestController extends AbstractRestfulController
     public function update($id, $data)
     {
         $contact = $this->contactService->getById($id, $this->contactForm);
-        
+
         if ($data) {
             $contact = $this->contactService->save($this->contactForm, $data, $contact);
-            
+
             if ($contact) {
                 $this->flashMessenger()->addSuccessMessage('Le contact a bien été updater.');
-                
+
                 return new JsonModel(array(
                     'data' => $contact->getId(),
                     'success' => true,
@@ -130,11 +129,11 @@ class ContactRestController extends AbstractRestfulController
     }
 
     public function delete($id)
-    {        
+    {
         $this->contactService->delete($id);
-        
+
         $this->flashMessenger()->addSuccessMessage('Le contact a bien été supprimé.');
- 
+
         return new JsonModel(array(
             'data' => 'deleted',
             'success' => true,

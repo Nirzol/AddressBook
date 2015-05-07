@@ -14,12 +14,11 @@ class ContactControllerFactory implements FactoryInterface
         /* @var $serviceLocator ControllerManager */
         $sm   = $serviceLocator->getServiceLocator();
         $contactService = $sm->get('AddressBook\Service\Contact');
-        
+
         $contactForm    = $sm->get('FormElementManager')->get('AddressBook\Form\ContactForm');
-        
+
         $controller = new ContactController($contactService, $contactForm);
 
         return $controller;
     }
 }
-

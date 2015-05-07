@@ -58,14 +58,15 @@ class Contact extends Addressbook
 
     /**
      * Set id
-     * 
+     *
      * @param integer $id
-     * 
+     *
      * @return \AddressBook\Entity\Contact
      */
     public function setId($id)
     {
         $this->id = $id;
+
         return $this;
     }
 

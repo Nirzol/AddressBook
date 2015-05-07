@@ -7,19 +7,19 @@ return array(
 //            'AddressBook\Controller\Contact' => AddressBook\Controller\ContactController::class
 //        ),
         'factories' => array(
-//            'AddressBook\Controller\Contact' => function($cm) {
-//                $sm = $cm->getServiceLocator();                
-////                var_dump($sm->get('Config')['theme']);                
+//            'AddressBook\Controller\Contact' => function ($cm) {
+//                $sm = $cm->getServiceLocator();
+////                var_dump($sm->get('Config')['theme']);
 //                $contactService = $sm->get('AddressBook\Service\Contact');
 //                return new AddressBook\Controller\ContactController($contactService);
 //            },
             'AddressBook\Controller\Contact'    => 'AddressBook\Factory\Controller\ContactControllerFactory',
             'AddressBook\Controller\ContactRest'    => 'AddressBook\Factory\Controller\ContactRestControllerFactory',
         ),
-    ), 
+    ),
     'form_elements' => array(
         'factories' => array(
-            'AddressBook\Form\ContactForm' => 'AddressBook\Factory\Form\ContactFormFactory',  
+            'AddressBook\Form\ContactForm' => 'AddressBook\Factory\Form\ContactFormFactory',
         ),
     ),
     'router' => array(
@@ -126,18 +126,18 @@ return array(
             'AddressBook\Service\ContactFake' => AddressBook\Service\Contact\ContactFakeService::class
         ),
         'factories' => array(
-//            'AddressBook\Service\ContactZendDb' => function($sm) {
+//            'AddressBook\Service\ContactZendDb' => function ($sm) {
 //                $adapter = $sm->get('Zend\Db\Adapter\Adapter');
 //                $tableGateway = new \Zend\Db\TableGateway\TableGateway('contact', $adapter);
 //                $service = new \AddressBook\Service\Contact\ContactZendDbService($tableGateway);
 //
 //                return $service;
 //            },
-//            'AddressBook\Service\ContactDoctrineORM' => function($sm) {
+//            'AddressBook\Service\ContactDoctrineORM' => function ($sm) {
 //                $om = $sm->get('Doctrine\ORM\EntityManager');
 //                $service = new AddressBook\Service\Contact\ContactDoctrineService($om);
 //                return $service;
-//            }, 
+//            },
             'AddressBook\Service\ContactZendDb' => 'AddressBook\Factory\Service\ContactZendDbServiceFactory',
             'AddressBook\Service\ContactDoctrineORM' => 'AddressBook\Factory\Service\ContactDoctrineORMServiceFactory',
         ),
@@ -165,7 +165,7 @@ return array(
                 )
             )
         )
-    ),              
+    ),
     'translator' => array(
         'locale' => 'fr_FR',
         'translation_file_patterns' => array(

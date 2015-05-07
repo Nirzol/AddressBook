@@ -9,7 +9,7 @@ class ContactZendDbServiceFactory implements FactoryInterface
 {
     public function createService(ServiceLocatorInterface $serviceLocator)
     {
-        /* @var $serviceLocator \Zend\ServiceManager\ServiceManager */        
+        /* @var $serviceLocator \Zend\ServiceManager\ServiceManager */
         $adapter = $serviceLocator->get('Zend\Db\Adapter\Adapter');
         $tableGateway = new \Zend\Db\TableGateway\TableGateway('contact', $adapter);
         $service = new \AddressBook\Service\Contact\ContactZendDbService($tableGateway);
@@ -17,5 +17,3 @@ class ContactZendDbServiceFactory implements FactoryInterface
         return $service;
     }
 }
-
-   

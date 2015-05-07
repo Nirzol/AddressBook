@@ -12,6 +12,7 @@ class Addressbook
                 $resultArray[$key] = $value->toArray($hydrator);
             }
         }
+
         return $resultArray;
     }
 }

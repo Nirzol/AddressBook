@@ -16,17 +16,15 @@ class ContactRestControllerFactory implements FactoryInterface
         /* @var $serviceLocator ControllerManager */
         $sm   = $serviceLocator->getServiceLocator();
         $contactService = $sm->get('AddressBook\Service\Contact');
-        
+
         $contactForm    = $sm->get('FormElementManager')->get('AddressBook\Form\ContactForm');
-        
+
         /* @var $serviceLocator ObjectManager */
         $om   = $sm->get('Doctrine\ORM\EntityManager');
         $hydrator = new DoctrineObject($om);
-        
-        
+
         $controller = new ContactRestController($contactService, $contactForm, $hydrator);
 
         return $controller;
     }
 }
-

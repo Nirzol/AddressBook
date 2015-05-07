@@ -12,8 +12,9 @@ class ContactFormFactory implements FactoryInterface
     {
         $services         = $serviceLocator->getServiceLocator();
         $entityManager    = $services->get('Doctrine\ORM\EntityManager');
-         
+
         $form = new ContactForm($entityManager);
+
         return $form;
     }
 }

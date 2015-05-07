@@ -5,7 +5,7 @@ namespace AddressBook\Service\Contact;
 class ContactFakeService implements ContactServiceInterface
 {
     protected $listeContacts = array();
-    
+
     public function __construct(Array $listeContacts = array())
     {
         if (empty($listeContacts)) {
@@ -14,23 +14,23 @@ class ContactFakeService implements ContactServiceInterface
                     ->setPrenom('Thierry')
                     ->setNom('Henry')
                     ->setEmail('titi@henry.com');
-            
+
             $this->listeContacts[] = $contact1;
-            
+
             $contact2 = new \AddressBook\Entity\Contact();
             $contact2->setId(4)
                     ->setPrenom('Barack')
                     ->setNom('Obama')
                     ->setTelephone('+1 352 356 3632');
-            
+
             $this->listeContacts[] = $contact2;
-            
+
             return;
         }
-        
+
         $this->listeContacts = $listeContacts;
     }
-    
+
     public function getAll()
     {
         return $this->listeContacts;
@@ -43,7 +43,7 @@ class ContactFakeService implements ContactServiceInterface
                 return $contact;
             }
         }
-        
+
         return null;
     }
     public function getByIdWithSociete($id)
@@ -58,7 +58,7 @@ class ContactFakeService implements ContactServiceInterface
 
     public function getAllRest()
     {
-        
+
     }
 
 }

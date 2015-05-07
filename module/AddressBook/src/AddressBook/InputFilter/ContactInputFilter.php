@@ -83,7 +83,7 @@ class ContactInputFilter extends InputFilter
                 ),
             ),
         ));
-        
+
         /**/
 //        $input = new \Zend\InputFilter\Input('email');
 //        $input->setRequired(false);
@@ -122,7 +122,7 @@ class ContactInputFilter extends InputFilter
                 ),
             ),
         ));
-        
+
         /**/
 //        $input = new \Zend\InputFilter\Input('telephone');
 //        $input->setRequired(false);

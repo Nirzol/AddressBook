@@ -12,7 +12,7 @@ class Alert extends \Zend\View\Helper\AbstractHelper
     $message
 </div>
 HEREDOC;
-        
+
         return $html;
     }
 }

@@ -11,7 +11,7 @@ class ContactTest extends \PHPUnit_Framework_TestCase
     {
         $this->contact = new \AddressBook\Entity\Contact();
     }
-    
+
     // Va être appelée une fois avant l'exécution des tests
     // de cette classe
     public static function setUpBeforeClass()
@@ -22,15 +22,15 @@ class ContactTest extends \PHPUnit_Framework_TestCase
     // après chaque test de cette classe
     protected function tearDown()
     {
-        
+
     }
-    
+
     // à la fin de tous les tests de cette classe
     public static function tearDownAfterClass()
     {
-        
+
     }
-    
+
     public function testInitValuesAreNull()
     {
         $this->assertNull($this->contact->getEmail());
